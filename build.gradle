@@ -19,6 +19,9 @@ dependencies {
     testImplementation('org.projectlombok:lombok')
     testAnnotationProcessor('org.projectlombok:lombok')
 
+    //mustache
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
     //jpa
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
