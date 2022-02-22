@@ -1,5 +1,6 @@
 package com.spring.webservice.web;
 
+import com.spring.webservice.config.auth.LoginUser;
 import com.spring.webservice.config.auth.dto.SessionUser;
 import com.spring.webservice.service.PostsService;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,7 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model, @SessionAttribute(name = "user", required = false) SessionUser user){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
         if(user != null){
             model.addAttribute("userName", user.getName());
