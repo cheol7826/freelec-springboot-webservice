@@ -2,3 +2,6 @@
 /.gradle/
 /.idea/
 /out
+
+# Secret Files
+application-oauth.properties
